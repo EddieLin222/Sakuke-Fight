@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="img/favicon.ico" rel="shortcut icon"/>
+  <title>SASUKE FIGHT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <style>
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Archivo Black', sans-serif;
+    }
+    #game{
+      width: 100%;
+      height: 100%;
+    }
+    .playerHp{
+      z-index: 9999;
+      position: fixed;
+      top: 50px;
+      left: 50px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    h4{
+      font-size: 28px;
+      margin: 0;
+      margin-bottom: 10px;
+      color: #000;
+      -webkit-text-stroke: .1px #fff;
+    }
+    .playerHp .outline{
+      width: 200px;
+      height: 30px;
+      border: solid 3px #fff;
+      display: flex;
+      justify-content: flex-start;
+    }
+    .enemyHp .outline{
+      width: 200px;
+      height: 30px;
+      border: solid 3px #fff;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .player-blood{
+      height: 100%;
+      width: 100%;
+      background-color:	#ff2600;
+      transition-duration: 1s;
+    }
+    .enemyHp{
+      z-index: 9999;
+      position: fixed;
+      top: 50px;
+      right: 50px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .enemy-blood{
+      height: 100%;
+      width: 100%;
+      background-color:	#ff2600;
+      transition-duration: 1s;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="game"></div>
+  <div class="playerHp">
+    <h4>Player HP</h4>
+    <div class="outline">
+      <div class="player-blood"></div>
+    </div>
+  </div>
+  <div class="enemyHp">
+    <h4>Enemy HP</h4>
+    <div class="outline">
+      <div class="enemy-blood"></div>
+    </div>
+  </div>
+  <div class="enemyHp"></div>
+  <script src="//cdn.jsdelivr.net/npm/phaser@3.23.0/dist/phaser.js"></script>
+  <script type="module" src="scene.js"></script>
+</body>
+</html>

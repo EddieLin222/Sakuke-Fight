@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>期中專題</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@500;700&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">
+        <img src="img/sasuke.png" alt="">
+        <h4>SASUKE FIGHT</h4>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#intro">Intro <span>介紹</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#control">Control <span>操作</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#rule">Rule <span>規則</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#next">Next <span>接續</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="space"></div>
+    </nav>
+  </header>
+  <div class="banner" id="home">
+    <div class="bg-text">2D PIXEL ACTION GAME</div>
+    <!-- <div class="star">
+      <img src="./img/star.png" alt="">
+    </div> -->
+    <div class="control-bar">
+      <div class="show-button" onclick="show()">
+        <p>control</p>
+        <img src="./img/arrows2.png" alt="">
+      </div>
+      <div class="title">Keyboard</div>
+      <ul>
+        <li>
+          <div class="icon">
+            Left.
+          </div>
+          <div class="dash"></div>
+          <p>左跑</p>
+        </li>
+        <li>
+          <div class="icon">
+            Right.
+          </div>
+          <div class="dash"></div>
+          <p>右跑</p>
+        </li>
+        <li>
+          <div class="icon">
+            Up.
+          </div>
+          <div class="dash"></div>
+          <p>跳躍</p>
+        </li>
+        <li>
+          <div class="icon">
+            Shift.
+          </div>
+          <div class="dash"></div>
+          <p>普攻</p>
+        </li>
+        <li>
+          <div class="icon">
+            Space.
+          </div>
+          <div class="dash"></div>
+          <p>招式</p>
+        </li>
+      </ul>
+    </div>
+    <div class="top">
+      <div class="top-container">
+        <div class="box-left">
+          <img src="./img/ball.png" alt="">
+          <h6>Pixel Action Game</h6>
+        </div>
+        <div class="box">
+          <!-- <img src="./img/ball.png" alt=""> -->
+          <h6>Reproduce Naruto : Ninja Council 2</h6>
+        </div>
+        <div class="box-right"></div>
+      </div>
+    </div>
+    <div class="center">
+      <div class="four-corner">
+        <div class="top-border"></div>
+        <div class="left-border"></div>
+        <div class="right-border"></div>
+        <div class="bottom-border"></div>
+        <img src="./img/maingif.gif" alt="">
+      </div>
+      <div class="container">
+        <div class="title-block">
+          <h1 class="title front-title">SASUKE FIGHT.</h1>
+          <h2 class="title">SASUKE FIGHT.</h2>
+        </div>
+        <h4>" Made By Phaser.js "</h4>
+        <a class="start" href="game.html">
+          <div class="back"></div>
+          <div class="front">
+            <p>Start Game</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="source-bar">
+      <p>Sprite Source</p>
+      <a class="arrow-box" href="https://www.spriters-resource.com/game_boy_advance/narutonc2/">
+        <img src="./img/arrows.png" alt="">
+      </a>
+    </div>
+    <div class="marquee-block">
+      <div class="marquee">
+        <p>SASUKE&ensp;FIGHT&ensp;IS&ensp;A&ensp;SIMPLE&ensp;WEB&ensp;GAME&ensp;//&ensp;USE&ensp;PHASER&ensp;GAME&ensp;FRAMEWORK&ensp;( a open source framework for canvas and webgl powered browser games . ) </p>
+      </div>
+    </div>
+  </div>
+  <div class="intro">
+    <div id="intro"></div>
+    <h4 class="title">Intro.</h4>
+    <p>( 火影忍者打鬥遊戲 ) ，透過 Phaser.js 提供的物理碰撞 ，精靈圖播放 ，快速引用遊戲所需的必要需求。</p>
+    <img src="./img/phaser-logo.png" alt="">
+    <div class="block">
+      <div class="step">
+        <div class="title">Step1.</div>
+        <div class="content">
+          準備遊戲所需用到的素材，如 : 雪碧圖 (Sprite sheet)，用於製作遊戲動畫。
+        </div>
+      </div>
+      <div class="step">
+        <div class="title">Step2.</div>
+        <div class="content">
+          引入 Phaser.js，將官方的 Getting Started Code 複製貼進自己的 HTML，成功的話打開網站有一個酷炫的動畫出現。
+        </div>
+      </div>
+      <div class="step">
+        <div class="title">Step3.</div>
+        <div class="content">
+          將素材替換成自己想做的遊戲內容及製作符合遊戲的事件，Phaser在網路上的教學資源很多，找到遊戲模式相近或者動畫邏輯相同的例子。
+        </div>
+      </div>
+      <div class="step">
+        <div class="title">Step4.</div>
+        <div class="content">
+          參考官方的文檔 ( 主要為 Phaser API Documentation )，逐步加入JS的判斷式，漸漸感受到與自己理想中的操作與畫面一致。
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="control">
+    <div id="control"></div>
+    <h4 class="title">Control.</h4>
+    <p>可以透過鍵盤操作角色 ( 包括移動、跳躍、攻擊 )。</p>
+    <div class="block">
+      <div class="second-title">
+        角色移動及跳躍
+      </div>
+      <div class="c-block">
+        <div class="control-content left">
+          <div class="up">
+            <div class="dash">
+              <div class="name">普通攻擊</div>
+            </div>
+            <div class="key">
+              <div class="bg"></div>
+              <div class="front">
+                Shift.
+              </div>
+            </div>
+          </div>
+          <div class="down">
+            <div class="key">
+              <div class="bg"></div>
+              <div class="front">
+                Space.
+              </div>
+            </div>
+            <div class="dash">
+              <div class="name">招式攻擊</div>
+            </div>
+          </div>
+        </div>
+        <div class="control-content right">
+          <div class="up">
+            <div class="dash">
+              <div class="name">跳躍</div>
+            </div>
+            <div class="key">
+              <div class="bg"></div>
+              <div class="front">
+                Up.
+              </div>
+            </div>
+          </div>
+          <div class="down">
+            <div class="inner left">
+              <div class="key">
+                <div class="bg"></div>
+                <div class="front">Left.</div>
+              </div>
+              <div class="dash">
+                <div class="name">左跑</div>
+              </div>
+            </div>
+            <div class="inner right">
+              <div class="key">
+                <div class="bg"></div>
+                <div class="front">
+                  Right.
+                </div>
+              </div>
+              <div class="dash">
+                <div class="name">右跑</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="extra">
+        ( 註 : 招式攻擊有範圍限制 ， 如敵人超過範圍則無法成功攻擊。 )
+      </div>
+    </div>
+  </div>
+  <div class="rule">
+    <div id="rule"></div>
+    <h4 class="title">Rule.</h4>
+    <p>基本遊戲規則介紹。</p>
+    <div class="block">
+      <div class="text">
+        <div class="game-title">
+          <img src="./img/target.svg" alt="">
+          <h6>遊戲方式 | Rules Of The Game |</h6>
+        </div>
+        <div class="game-content">
+          <div class="line">
+            <div class="line-title">『 基本規則 』</div>
+            <div class="line-content">
+              玩家及對手一開始的生命 Health Point（HP）都為100點<br>玩家可使用鍵盤操控角色，每成功攻擊到對手一次可以使對手的生命下降10點（絕招攻擊成功可使對手生命下降50點）<br>而當玩家被對手攻擊到也會下降10點的生命
+            </div>
+          </div>
+          <div class="line">
+            <div class="line-title">『 敵人追擊 』</div>
+            <div class="line-content">
+              玩家與敵人距離在一定範圍內才會被敵人追擊，可在此範圍外使用集氣招式攻擊
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="next">
+    <div id="next"></div>
+    <h4 class="title">Next.</h4>
+    <p>接續新增項目（ 包括招式、角色、遊戲模式 ）。</p>
+    <div class="block">
+      <div class="n-card">
+        <div class="left">
+          <img src="./img/kuwo.png" alt="">
+        </div>
+        <div class="right">
+          <div class="title-block">
+            <div class="n-title">▸ 武器及招式</div>
+            <div class="n-content">( 新增武器攻擊及更多角色招式 )</div>
+          </div>
+          <div class="n-intro">
+            遠距離攻擊招式、武器攻擊及角色中招動畫
+          </div>
+        </div>
+      </div>
+      <div class="n-card">
+        <div class="left">
+          <img src="./img/kakashi.png" alt="">
+        </div>
+        <div class="right">
+          <div class="title-block">
+            <div class="n-title">▸ 角色</div>
+            <div class="n-content">( 新增可選角色 )</div>
+          </div>
+          <div class="n-intro">
+            加入漩渦鳴人、旗木卡卡西等人氣角色，增加選擇多樣性
+          </div>
+        </div>
+      </div>
+      <div class="n-card">
+        <div class="left">
+          <img src="./img/mode.png" alt="">
+        </div>
+        <div class="right">
+          <div class="title-block">
+            <div class="n-title">▸ 遊戲模式</div>
+            <div class="n-content">( 新增可選遊戲模式 )</div>
+          </div>
+          <div class="n-intro">
+            增加橫向捲軸闖關模式，玩家對打模式等動作遊戲常見的遊玩方式
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <h6>Static Website ( Made By Eddie )</h6>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script>
+    let isShow = false
+    function show () {
+      if(isShow === false){
+        document.querySelector('.control-bar').style.transform = 'translateX(0%)'
+        document.querySelector('.show-button img').style.transform = 'rotate(90deg)'
+        isShow = true
+      }else if(isShow === true) {
+        document.querySelector('.control-bar').style.transform = 'translateX(-100%)'
+        document.querySelector('.show-button img').style.transform = 'rotate(0deg)'
+        isShow = false
+      }
+    }
+    
+    let marqueeText = document.querySelector('.marquee p')
+    const marqueeTextWidth = document.querySelector('.marquee p').offsetWidth
+    function getMarqueeWidth () {
+      return document.querySelector('.marquee').offsetWidth
+    }
+    let marqueeWidth = getMarqueeWidth()
+
+    let marqueeEffect = setInterval(marquee, 20)
+    function marquee () {
+      marqueeWidth -= 1
+      marqueeText.style.left = marqueeWidth + 'px'
+      if (marqueeWidth < marqueeTextWidth * -1) {
+        marqueeWidth = getMarqueeWidth()
+      }
+    }
+
+    // navbar
+    window.onresize = mobileNavbar
+
+    let windowWidth = window.innerWidth;
+    function mobileNavbar() {
+      windowWidth = window.innerWidth;
+    }
+    $('.navbar a').on('click', function(){
+      if(windowWidth <= 992){
+        $('.navbar-toggler').click();
+      }
+    });
+  </script>
+</body>
+
+</html>
